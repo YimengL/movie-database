@@ -1,2 +1,12 @@
 module ApplicationHelper
+  
+  # return the title
+  def full_title(page_title = '')
+    base_title = "Movie Database"
+    if page_title.empty?
+      base_title
+    else
+      page_title + " | " + base_title
+    end
+  end
 end
