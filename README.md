@@ -19,7 +19,10 @@ $ rails server -b $IP -p $PORT
 ```Bash
 $ bundle exec rake test
 ```
-
+* Reset the database
+```Bash
+$ bundle exec rake db:migrate:reset
+```
 * Database Migrate
 ```Bash
 $ bundle exec rake db:migrate
@@ -33,4 +36,8 @@ $ bundle exec rake db:rollback
 $ bundle exec rake test
 $ git push heroku
 $ heroku run rake db:migrate
+```
+* Heroku console
+```Bash
+heroku run console --sandbox
 ```
