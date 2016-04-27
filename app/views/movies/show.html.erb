@@ -1,0 +1,16 @@
+<% provide(:title, @movie.name) %>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2><%= @movie.name %></h2>
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-md-6">
+    <%= image_tag @movie.picture.url if @movie.picture? %>
+  </div>
+  <div class="col-md-6">
+    <%= @movie.content %>
+  </div>
+</div>

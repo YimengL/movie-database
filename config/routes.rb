@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
+#  root 'static_pages#home'
+  root 'movies#index'
   
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
@@ -10,5 +11,6 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   
   resources :users
+  resources :movies
 
 end

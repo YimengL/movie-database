@@ -3,12 +3,12 @@
 -- Techflex Rails Homework
 
 * 
-* URL: [techflex-hw-yimengli.herokuapp.com](techflex-hw-yimengli.herokuapp.com)
+* URL: [http://techflex-hw-yimengli.herokuapp.com/](http://techflex-hw-yimengli.herokuapp.com/)
 
 #### Data Scheme
 
 * Users(User_ID, User_Name, Email, Password, isAdmin)
-* 
+* Movies(id, content, User_ID, )
 
 #### Tips
 * Run the server on c9 ide
@@ -51,4 +51,12 @@ heroku run console --sandbox
 - [ ] The movie should have a description of the movie; a synopsis.
 - [ ] Your homepage should consist of a searchable list of movies, including an average review score from users.
 - [ ] Users should not be able to review the same movie twice.
-- [ ] 
+- [ ] Reviews should consist of a score and a comment
+- [ ] Put your best foot forward; make sure the front-end looks as nice as possible
+
+
+#### Optional:
+
+- [ ] The URL for the movies should be friendly. Instead of showing [/movies/7], make it say something such as [/movies/Iron_Man] or [/movies/iron_man] for your query string. 
+- 
+- [x] Send an email to new users thanking them for signing up.
