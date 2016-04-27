@@ -41,3 +41,14 @@ $ heroku run rake db:migrate
 ```Bash
 heroku run console --sandbox
 ```
+
+*****
+#### Requirements:
+- [x] Your website should be in the Ruby on Rails Framework.
+- [x] Your example must run on Heroku, and your code must be on GitHub.
+- [ ] You should have an administrative interface to add in new movies.
+- [ ] The moives should have a picture field, to upload a DVD cover, or movie poster cover.
+- [ ] The movie should have a description of the movie; a synopsis.
+- [ ] Your homepage should consist of a searchable list of movies, including an average review score from users.
+- [ ] Users should not be able to review the same movie twice.
+- [ ] 
