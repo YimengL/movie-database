@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
       flash[:success] = "Movie created!"
       redirect_to movie_url(@movie)
     else
-      render 'new'
+      redirect_to 'new'
     end
   end
   
