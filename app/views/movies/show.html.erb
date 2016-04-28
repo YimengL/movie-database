@@ -9,8 +9,37 @@
 
   <div class="col-md-6">
     <%= image_tag @movie.picture.url if @movie.picture? %>
+    <%= image_tag "http://placehold.it/400x250" unless @movie.picture? %>
   </div>
   <div class="col-md-6">
+    <h3>Movie Description</h3>
     <%= @movie.content %>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <% if Comment.exists?(user_id: current_user.id, movie_id: @movie.id) %>
+      <% @comment = Comment.find_by(movie_id: @movie.id, user_id: current_user.id) %>
+      <h4>My review: </h4>
+      <p>
+        <%= @comment.comment %>
+      </p>
+    
+      <h4>My rating: </h4>
+      <p>
+        <%= @comment.rating %>
+      </p>
+      <div class="btn btn-default">
+        <%= link_to "Edit Review", edit_comment_path(:movie_id => @movie.id), :method => "get" %>
+      </div>
+      <div class="btn btn-default">
+        <%= link_to "delete", comment_path(@comment), method: :delete, data: { confirm: "You sure?" } %>
+      </div>
+    <% else %>
+      <div class="btn btn-default">
+        <%= link_to "Create Review", new_comment_path(:movie_id => @movie.id), :method => "get" %>
+      </div>
+    <% end %>
   </div>
 </div>

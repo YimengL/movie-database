@@ -61,3 +61,8 @@ input, textarea, select, .uneditable-input {
 img {
   max-width:100%
 }
+
+form.formtastic fieldset > ol > li.radio fieldset ol li {
+    margin:0.1em 0.5em 0.5em 0;
+    display: inline-block;
+}
