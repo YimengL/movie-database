@@ -11,4 +11,8 @@ class Movie < ActiveRecord::Base
     where("name LIKE ?", "%#{search}%")
   end
   
+  def to_param
+    [id, name.parameterize].join("-")
+  end
+  
 end
