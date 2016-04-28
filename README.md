@@ -60,7 +60,7 @@ heroku run console --sandbox
 - [x] The URL for the movies should be friendly. Instead of showing [/movies/7], make it say something such as [/movies/Iron_Man] or [/movies/iron_man] for your query string.
 - [x] Your search should support partial works; "Man" in the search would bring up "Batman Begins" if that movie was in your database
 - [x] if a user should be able to edit their existing review.
-- [ ] Average review score should be shown. Showing the average of all the movie's scores as the average score
+- [x] Average review score should be shown. Showing the average of all the movie's scores as the average score
 - [x] Make a log-in interface for your administrators. While you could have a seperate URL unknown to users, it is safer if it is behind an administrative login. 
 - [x] Send an email to new users thanking them for signing up.
 - [ ] Facebook or Google OAuth login in addition to your own login

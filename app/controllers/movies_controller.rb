@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   
   def show
     @movie = Movie.find(params[:id])
+    @avg_score = Comment.where(movie_id: params[:id]).average(:rating)
   end
   
   def new
