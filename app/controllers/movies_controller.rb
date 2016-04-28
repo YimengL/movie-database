@@ -3,7 +3,9 @@ class MoviesController < ApplicationController
   before_action :admin_user, only: [:create, :edit, :destroy, :update, :new]
    
   def index
-    @movies = Movie.paginate(page: params[:page])
+    @movies = Movie.all
+    @movies = Movie.search(params[:name]) if params[:name].present?
+    @movies = @movies.paginate(page: params[:page], per_page:15)
   end
   
   def show
@@ -21,7 +23,7 @@ class MoviesController < ApplicationController
       flash[:success] = "Movie created!"
       redirect_to movie_url(@movie)
     else
-      redirect_to 'new'
+      render 'new'
     end
   end
   

@@ -2,13 +2,13 @@
 
 -- Techflex Rails Homework
 
-* 
 * URL: [http://techflex-hw-yimengli.herokuapp.com/](http://techflex-hw-yimengli.herokuapp.com/)
 
 #### Data Scheme
 
 * Users(User_ID, User_Name, Email, Password, isAdmin)
-* Movies(id, content, User_ID, )
+* Movies(id, content, User_ID, Description)
+* Comments(id, movie_id, user_id, comment, rating)
 
 #### Tips
 * Run the server on c9 ide
@@ -49,7 +49,7 @@ heroku run console --sandbox
 - [x] You should have an administrative interface to add in new movies.
 - [x] The moives should have a picture field, to upload a DVD cover, or movie poster cover.
 - [x] The movie should have a description of the movie; a synopsis.
-- [ ] Your homepage should consist of a searchable list of movies, including an average review score from users.
+- [x] Your homepage should consist of a searchable list of movies, including an average review score from users.
 - [x] Users should not be able to review the same movie twice.
 - [x] Reviews should consist of a score and a comment
 - [ ] Put your best foot forward; make sure the front-end looks as nice as possible
@@ -58,10 +58,10 @@ heroku run console --sandbox
 #### Optional:
 
 - [ ] The URL for the movies should be friendly. Instead of showing [/movies/7], make it say something such as [/movies/Iron_Man] or [/movies/iron_man] for your query string.
-- [ ] Your search should support partial works; "Man" in the search would bring up "Batman Begins" if that movie was in your database
+- [x] Your search should support partial works; "Man" in the search would bring up "Batman Begins" if that movie was in your database
 - [x] if a user should be able to edit their existing review.
 - [ ] Average review score should be shown. Showing the average of all the movie's scores as the average score
-- [ ] Make a log-in interface for your administrators. While you could have a seperate URL unknown to users, it is safer if it is behind an administrative login. 
+- [x] Make a log-in interface for your administrators. While you could have a seperate URL unknown to users, it is safer if it is behind an administrative login. 
 - [x] Send an email to new users thanking them for signing up.
 - [ ] Facebook or Google OAuth login in addition to your own login
 - [ ] The page should look good on your phone as well as your desktop
