@@ -11,7 +11,11 @@ class Movie < ActiveRecord::Base
   validates :content, presence: true, length: { maximum: 140 }
 
   def self.search(search)
-    where("name ILIKE ?", "%#{search}%")
+    if Rails.env.production?
+      where("name ILIKE ?", "%#{search}%")  # pg
+    else
+      where("name LIKE ?", "%#{search}%")   # sqlite3
+    end
   end
 
 end
