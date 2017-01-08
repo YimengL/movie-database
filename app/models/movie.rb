@@ -11,7 +11,7 @@ class Movie < ActiveRecord::Base
   validates :content, presence: true, length: { maximum: 140 }
 
   def self.search(search)
-    where("name LIKE ?", "%#{search}%")
+    where("name ILIKE ?", "%#{search}%")
   end
 
 end
