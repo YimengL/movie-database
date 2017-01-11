@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     end
     if @user.save
       session[:omniauth] = nil unless @user.new_record?
-      UserMailer.welcome(@user).deliver_now
+#      UserMailer.welcome(@user).deliver_now
       log_in @user
       flash[:success] = "Welcome to the Movie Database!"
       redirect_to user_url(@user)
