@@ -9,12 +9,13 @@ class AuthenticationsController < ApplicationController
                                                           uid: auth['uid'])
     if authentication
       log_in authentication.user
+      flash[:warning] = "Already exist."
       redirect_to user_url(authentication.user)
     elsif current_user
       current_user.authentications.create(provider: auth['provider'],
                                           uid: auth['uid'])
-      flash[:success] = "Authentication successful."
-      redirect_to authentications_url
+      flash[:success] = "Integrated successful."
+      redirect_to user_url(current_user)
     else
       user = User.new
       user.authentications.build(provider: auth['provider'], uid: auth['uid'])

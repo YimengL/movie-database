@@ -4,16 +4,21 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:session, url: login_path) do |f| %>
-      
+
       <%= f.label :email %>
       <%= f.email_field :email %>
-      
+
       <%= f.label :password %>
       <%= f.password_field :password %>
-      
+
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
-    
+
     <p>New User? <%= link_to "Sign up now!", signup_path %></p>
+    <hr>
+    <h4>Add another service to sign in with: </h4>
+    <a href="/auth/google_oauth2">
+      <%= image_tag "google_32.png", :alt => "Google" %>
+    </a>
   </div>
 </div>
