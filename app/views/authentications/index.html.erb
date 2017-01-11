@@ -1,0 +1,6 @@
+<% provide(:title, "Sign In") %>
+<% if @authentications %>
+  <% for authentication in @authentications %>
+    <li><%= authentication.uid %></li>
+  <% end %>
+<% end %>
