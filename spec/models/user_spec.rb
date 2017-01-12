@@ -19,6 +19,10 @@ describe User do
     expect(@user).to respond_to(:password_digest)
   end
 
+  it "Password Confirmation" do
+    expect(@user).to respond_to(:password_confirmation)
+  end
+
   it "authenticate method" do
     expect(@user).to respond_to(:authenticate)
   end
