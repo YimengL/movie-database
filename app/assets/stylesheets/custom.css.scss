@@ -55,7 +55,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   height: auto;
   margin-bottom: 15px;
-  @include box_sizing;  
+  @include box_sizing;
 }
 
 img {
@@ -63,6 +63,20 @@ img {
 }
 
 form.formtastic fieldset > ol > li.radio fieldset ol li {
-    margin:0.1em 0.5em 0.5em 0;
-    display: inline-block;
+  margin:0.1em 0.5em 0.5em 0;
+  display: inline-block;
+}
+
+/********** Extra small devices only **********/
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+
+  .navbar-brand h1 {
+    padding-top: 10px;
+    font-size: 7vw;
+  }
 }
