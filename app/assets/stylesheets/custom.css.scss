@@ -66,3 +66,15 @@ form.formtastic fieldset > ol > li.radio fieldset ol li {
   margin:0.1em 0.5em 0.5em 0;
   display: inline-block;
 }
+
+/* header */
+
+#nav-list-1 a, #nav-list-2 a {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  #nav-list-1 a:hover, #nav-list-2 a:hover {
+    background: #E7E7E7;
+  }
+}

@@ -10,12 +10,12 @@
 			<%= link_to "Movie Database", root_path, class: "navbar-brand" %>
     </div>
     <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" id="nav-list-1">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" id="nav-list-2">
         <% if logged_in? %>
           <li><%= link_to "Users", users_path %></li>
           <li><%= link_to "Profile", current_user %></li>
